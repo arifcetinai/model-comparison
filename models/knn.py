@@ -13,3 +13,15 @@ def evaluate(model, X_test, y_test, target_names=None):
     acc = accuracy_score(y_test, preds)
     report = classification_report(y_test, preds, target_names=target_names)
     return acc, report, preds
+
+
+def tune_k(X_train, y_train, X_test, y_test, k_range=range(1, 21)):
+    """Try different k values and return accuracy for each."""
+    results = {}
+    for k in k_range:
+        m = KNeighborsClassifier(n_neighbors=k)
+        m.fit(X_train, y_train)
+        acc = accuracy_score(y_test, m.predict(X_test))
+        results[k] = acc
+    best_k = max(results, key=results.get)
+    return best_k, results
