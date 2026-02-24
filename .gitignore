@@ -12,7 +12,4 @@ venv/
 .idea/
 .vscode/
 *.ipynb_checkpoints
-results/*.png
-results/*.csv
-results/*.json
-!results/.gitkeep
+
