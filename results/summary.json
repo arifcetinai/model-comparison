@@ -1,0 +1,15 @@
+{
+  "Logistic Regression": {
+    "accuracy": 0.9722
+  },
+  "k-NN": {
+    "accuracy": 1.0,
+    "best_k": 7
+  },
+  "Decision Tree": {
+    "accuracy": 0.9444
+  },
+  "Neural Network": {
+    "accuracy": 0.7778
+  }
+}
